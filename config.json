@@ -2,7 +2,8 @@
   "ownerNumber": ["6285725012403@s.whatsapp.net"],
   "ownerName": ["Ananda"],
   "botName": "Chitanda Eru Bot",
-  "sessionName": "chitanda-md",
+  "sessionName": "chitanda",
+  "footer": "By Ananda Ganz ©2022"
   "pathimg": "./media/Chitanda.jpg",
   "gamewaktu": 90,
   "limitCount": 25,
