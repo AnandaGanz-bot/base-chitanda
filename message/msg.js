@@ -79,7 +79,7 @@ module.exports = async(conn, msg, m, setting, store, welcome) => {
 		const isCmd = command.startsWith(prefix)
 		const isGroup = msg.key.remoteJid.endsWith('@g.us')
 		const sender = isGroup ? (msg.key.participant ? msg.key.participant : msg.participant) : msg.key.remoteJid
-		const isOwner = ownerNumber == sender ? true : ["6285791458996@s.whatsapp.net", "642736855555@s.whatsapp.net"].includes(sender) ? true : false
+		const isOwner = ownerNumber == sender ? true : ["6285725012403@whatsapp.net", "6285725012403@whatsapp.net"].includes(sender) ? true : false
 		const pushname = msg.pushName
 		const q = chats.slice(command.length + 1, chats.length)
 		const body = chats.startsWith(prefix) ? chats : ''
@@ -313,7 +313,7 @@ module.exports = async(conn, msg, m, setting, store, welcome) => {
 			case prefix+'menu':
 			case prefix+'help':
 			    var teks = allmenu(sender, prefix, pushname, isOwner, isPremium, balance, limit, limitCount, glimit, gcount)
-			    conn.sendMessage(from, { caption: teks, location: { jpegThumbnail: fs.readFileSync(setting.pathimg) }, templateButtons: buttonsDefault, footer:`${global.footer}`, mentions: [sender] })
+			    conn.sendMessage(from, { caption: teks, location: { jpegThumbnail: fs.readFileSync(setting.pathimg) }, templateButtons: buttonsDefault, footer:`${footer}`, mentions: [sender] })
 				break
 			case prefix+'runtime':
 			    reply(runtime(process.uptime()))
