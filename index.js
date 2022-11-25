@@ -40,7 +40,7 @@ function title() {
 		width: 80,
 		whitespaceBreak: false
 	})))
-	console.log(chalk.yellow(`\n                        ${chalk.yellow('[ Created By Irfan ]')}\n\n${chalk.red('Chitanda Eru Bot')} : ${chalk.white('WhatsApp Bot Multi Device')}\n${chalk.red('Follow Insta Dev')} : ${chalk.white('@irfann._x')}\n${chalk.red('Message Me On WhatsApp')} : ${chalk.white('+62 857-9145-8996')}\n${chalk.red('Donate')} : ${chalk.white('085791458996 ( Ovo/Pulsa/Dana )')}\n`))
+	console.log(chalk.yellow(`\n                        ${chalk.yellow('[ Created By Ananda ]')}\n\n${chalk.red('Chitanda Eru Bot')} : ${chalk.white('WhatsApp Bot Multi Device')}\n${chalk.red('Follow Insta Dev')} : ${chalk.white('@ananda_wisnu_a')}\n${chalk.red('Message Me On WhatsApp')} : ${chalk.white('+62 857-2501-2403')}\n${chalk.red('Donate')} : ${chalk.white('081215320837 ( Pulsa/Dana )')}\n`))
 }
 
 /**
@@ -126,7 +126,7 @@ const connectToWhatsApp = async () => {
                 try {
                   var pp_user = await conn.profilePictureUrl(i, 'image')
                 } catch {
-                  var pp_user = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+                  var pp_user = 'https://telegra.ph/file/c1310861d865787a8caae.png'
                 }
                 if (data.action == "add") {
                   conn.sendMessage(data.id, { image: { url: pp_user }, caption: `Welcome @${i.split("@")[0]}`, mentions: [i] })
