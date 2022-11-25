@@ -223,8 +223,8 @@ module.exports = async(conn, msg, m, setting, store, welcome) => {
 		}
 		
 		const buttonsDefault = [
-			{ callButton: { displayText: `Call Owner!`, phoneNumber: `+6285791458996` } },
-			{ urlButton: { displayText: `Script!`, url : `https://github.com/rtwone/chitandabot` } },
+			{ callButton: { displayText: `Call Owner!`, phoneNumber: `+6285725012403` } },
+			{ urlButton: { displayText: `Script!`, url : `https://github.com/AnandaGanz-bot/chitandabot` } },
 			{ quickReplyButton: { displayText: `🧑 Owner`, id: `${prefix}owner` } },
 			{ quickReplyButton: { displayText: `💰 Donasi`, id: `${prefix}donate` } }
 		]
@@ -313,7 +313,7 @@ module.exports = async(conn, msg, m, setting, store, welcome) => {
 			case prefix+'menu':
 			case prefix+'help':
 			    var teks = allmenu(sender, prefix, pushname, isOwner, isPremium, balance, limit, limitCount, glimit, gcount)
-			    conn.sendMessage(from, { caption: teks, location: { jpegThumbnail: fs.readFileSync(setting.pathimg) }, templateButtons: buttonsDefault, footer: 'NullTeam-ID © 2021', mentions: [sender] })
+			    conn.sendMessage(from, { caption: teks, location: { jpegThumbnail: fs.readFileSync(setting.pathimg) }, templateButtons: buttonsDefault, footer:`${global.footer}`, mentions: [sender] })
 				break
 			case prefix+'runtime':
 			    reply(runtime(process.uptime()))
@@ -325,7 +325,7 @@ module.exports = async(conn, msg, m, setting, store, welcome) => {
 		            break
 			case prefix+'donate':
 			case prefix+'donasi':
-			    reply(`──「 MENU DONATE 」──\n\nHi ${pushname} 👋🏻\n\`\`\`GOPAY : 085791458996\`\`\`\n\`\`\`PULSA : 085735338148 (Indosat)\`\`\`\nTerimakasih untuk kamu yang sudah donasi untuk perkembangan bot ini _^\n──「 THX FOR YOU ! 」──`)
+			    reply(`──「 MENU DONATE 」──\n\nHi ${pushname} 👋🏻\n\`\`\`GOPAY : -\`\`\`\n\`\`\`PULSA : 081215320837 (Indosat)\`\`\`\nTerimakasih untuk kamu yang sudah donasi untuk perkembangan bot ini _^\n──「 THX FOR YOU ! 」──`)
 			    break
 			case prefix+'owner':
 			    for (let x of ownerNumber) {
@@ -928,7 +928,7 @@ module.exports = async(conn, msg, m, setting, store, welcome) => {
                 break
 			case prefix+'transfer':
             case prefix+'tf':{
-                 if (args.length < 2) return reply(`Kirim perintah *${command}* @tag nominal\nContoh : ${command} @6285791458996 2000`)
+                 if (args.length < 2) return reply(`Kirim perintah *${command}* @tag nominal\nContoh : ${command} @6285725012403 2000`)
                  if (mentioned.length == 0) return reply(`Tag orang yang ingin di transfer balance`)
                  if (!args[2]) return reply(`Masukkan nominal nya!`)
                  if (isNaN(args[2])) return reply(`Nominal harus berupa angka!`)
